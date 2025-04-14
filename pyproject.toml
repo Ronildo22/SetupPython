@@ -1,0 +1,33 @@
+[project]
+name = "setuppython"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+isort = "^6.0.1"
+mkdocs = "^1.6.1"
+black = "^25.1.0"
+setuptools = "^78.1.0"
+pylama = "^8.4.1"
+pip-audit = "^2.9.0"
+
+[tool.black]
+line-length =  79
+
+[tool.pylama]
+linters = "pycodestyle,pyflakes,mccabe"
+ignore = "W503"
+max_line_length = 79
