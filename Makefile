@@ -1,9 +1,12 @@
 install:
 	@poetry install
 
-format:
+lint:
 	@poetry run black .
 	@poetry run isort .
+
+format:
+	@poetry run prospector .
 
 test:
 	@pytest -v

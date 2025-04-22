@@ -21,13 +21,12 @@ isort = "^6.0.1"
 mkdocs = "^1.6.1"
 black = "^25.1.0"
 setuptools = "^78.1.0"
-pylama = "^8.4.1"
 pip-audit = "^2.9.0"
+prospector = "^1.16.1"
+vulture = "^2.14"
+mypy = "^1.15.0"
+bandit = "^1.8.3"
+radon = "^6.0.1"
 
 [tool.black]
 line-length =  79
-
-[tool.pylama]
-linters = "pycodestyle,pyflakes,mccabe"
-ignore = "W503"
-max_line_length = 79
