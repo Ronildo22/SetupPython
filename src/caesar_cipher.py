@@ -1,12 +1,11 @@
 """
-Caesar Cipher Implementation.
-
-This module provides a class to perform Caesar Cipher encryption and decryption
-The Caesar Cipher is a type of substitution cipher where each letter in the
-plaintext is shifted a certain number of places down or up the alphabet.
+This module provides a CaesarCipher class for performing encryption and
+decryption using the Caesar Cipher technique.
 """
 
 import string
+
+from exceptions.exception_caesar_cipher import ValueNotFoundInAlphabet
 
 
 class CaesarCipher:
@@ -17,11 +16,10 @@ class CaesarCipher:
         Initialize the CaesarCipher with a specific shift value.
 
         Args:
-        ----
             shift_to_right (int): Number of positions to shift each character
             to the right in the alphabet.
-
         """
+
         self.shift_to_right = shift_to_right
         self.alphabet = string.ascii_lowercase
 
@@ -30,22 +28,19 @@ class CaesarCipher:
         Encrypt the given text using the Caesar Cipher.
 
         Args:
-        ----
             text (str): The text to be encrypted.
 
         Returns
-        -------
             str: The encrypted text.
-
         """
+
         word_encript = ""
         for text_item in text.replace(" ", ""):
             index = self.alphabet.find(text_item)
 
             if index == -1:
-                raise Exception(
-                    "Valor não encontrado no alfabeto aaaaaaaaaaassaaaaaaaaaaa"
-                    "aaaaaaaaaaa"
+                raise ValueNotFoundInAlphabet(
+                    "Valor não encontrado no alfabeto"
                 )
 
             index_caesar_cipher = index + self.shift_to_right
@@ -63,16 +58,17 @@ class CaesarCipher:
             text (str): The text to be decrypted.
 
         Returns
-        -------
             str: The decrypted text.
-
         """
+
         word_decript = ""
         for text_item in text.replace(" ", ""):
             index = self.alphabet.find(text_item)
 
             if index == -1:
-                raise Exception("Valor não encontrado no alfabeto")
+                raise ValueNotFoundInAlphabet(
+                    "Valor não encontrado no alfabeto"
+                )
 
             index_caesar_cipher = index - self.shift_to_right
             word_caesar_cipher = self.alphabet[index_caesar_cipher]
