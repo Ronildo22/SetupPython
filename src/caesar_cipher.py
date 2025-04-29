@@ -5,7 +5,7 @@ decryption using the Caesar Cipher technique.
 
 import string
 
-from exceptions.exception_caesar_cipher import ValueNotFoundInAlphabet
+from src.exceptions.exception_caesar_cipher import ValueNotFoundInAlphabet
 
 
 class CaesarCipher:
