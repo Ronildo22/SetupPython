@@ -1,33 +1,47 @@
-# Execute Blue(code formated)
+# Execute Black(code formated)
 
-```python
-blue {file_name} or .
+```bash
+black {file_name} or black .
 ```
 
 - with poetry
 
-```python
-poetry run blue {file_name} or .
+```bash
+poetry run black {file_name} or poetry run black .
+```
+
+---
+
+# Execute Prospector(analisity of code static)
+
+```bash
+prospector {file_name} or prospector .
+```
+
+- with poetry
+
+```bash
+poetry run prospector {file_name} or poetry run prospector .
 ```
 
 ---
 
 # Execute isort(ordenador imposts)
 
-```python
-isort {file_name} or .
+```bash
+isort {file_name} or isort .
 ```
 
-```python
-isort {file_name} or . --check
+```bash
+isort {file_name} or isort . --check
 ```
 
 > mostrando qual a desordenação para que você mesmo check e ajuste
 
 - with poetry
 
-```python
-poetry run isort {file_name} or .
+```bash
+poetry run isort {file_name} or poetry run isort .
 ```
 
 ---
@@ -36,36 +50,36 @@ poetry run isort {file_name} or .
 
 - Create mkdocs
 
-```python
+```bash
 mkdocs new .
 ```
 
 - with poetry
 
-```python
+```bash
 poetry run mkdocs new .
 ```
 
 - execute mkdocs
 
-```python
+```bash
 mkdocs serve
 ```
 
 - with poetry
 
-```python
+```bash
 poetry run mkdocs serve
 ```
 
 # Execute pip-audit(Verify vunerabilits in dependences)
 
-```python
+```bash
 pip-audit
 ```
 
 - with poetry
 
-```python
+```bash
 poetry run pip-audit
 ```
