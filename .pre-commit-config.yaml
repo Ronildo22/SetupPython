@@ -21,12 +21,12 @@ repos:
 
       - id: pytest
         name: Run Pytest
-        entry: poetry run pytest -v
+        entry: poetry run pytest -v tests/
         language: system
         types: [python]
 
       - id: pip-audit
         name: Run Pip Audit
-        entry: pip-audit --path .
+        entry: poetry run pip-audit --path .
         language: system
         pass_filenames: false
