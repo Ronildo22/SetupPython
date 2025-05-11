@@ -13,3 +13,15 @@ test:
 
 sec:
 	@pip-audit
+
+cc:
+	@poetry run radon cc -s src
+
+mi:
+	@poetry run radon mi -s src
+
+raw:
+	@poetry run radon raw -s src
+
+hal:
+	@poetry run radon hal src
